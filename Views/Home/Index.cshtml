@@ -1,0 +1,30 @@
+﻿@model ItemPedido;
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+<div class="container text-center">
+
+    <h5 class="mb-2">[Registre seu Pedido]</h5>
+
+    <div class="d-flex justify-content-center">
+        <div class="border border-light-subtle shadow p-3 mb-5 bg-white rounded">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="descricao" class="form-label">Item</label>
+                <input asp-for="descricao" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="valor_unitario" class="form-label">Valor unitário</label>
+                <input asp-for="valor_unitario" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="quantidade" class="form-label">Quantidade</label>
+                <input asp-for="quantidade" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-dark" value="Confirmar">Confirmar</button>
+        </form>
+        </div>
+    </div>
+</div>
